@@ -1,18 +1,97 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Login - Vulnerable</title>
+    <meta charset="UTF-8">
+    <title>Login | Flipkart Style</title>
+    <style>
+        body {
+            background-color: #f1f3f6;
+            font-family: 'Segoe UI', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .login-container {
+            display: flex;
+            width: 700px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .left-panel {
+            background-color: #2874f0;
+            color: white;
+            padding: 40px 30px;
+            width: 40%;
+        }
+
+        .left-panel h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .left-panel p {
+            font-size: 14px;
+            margin-top: 0;
+        }
+
+        .right-panel {
+            background-color: white;
+            padding: 40px 30px;
+            width: 60%;
+        }
+
+        .right-panel input[type="text"],
+        .right-panel input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 2px;
+        }
+
+        .right-panel input[type="submit"] {
+            width: 100%;
+            background-color: #fb641b;
+            color: white;
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            border-radius: 2px;
+        }
+
+        .right-panel input[type="submit"]:hover {
+            background-color: #f06218;
+        }
+
+        .right-panel .footer-text {
+            font-size: 12px;
+            color: #878787;
+            margin-top: 10px;
+        }
+    </style>
 </head>
 <body>
-    <h2>Login Form (Vulnerable)</h2>
-    <form method="POST" action="login.php">
-        <label>Username:</label>
-        <input type="text" name="name"><br><br>
 
-        <label>Password:</label>
-        <input type="password" name="password"><br><br>
+<div class="login-container">
+    <div class="left-panel">
+        <h2>Login</h2>
+        <p>Get access to your Orders, Wishlist and Recommendations</p>
+    </div>
+    <div class="right-panel">
+        <form method="POST" action="login.php">
+            <input type="text" name="name" placeholder="Enter Username" required>
+            <input type="password" name="password" placeholder="Enter Password" required>
+            <input type="submit" value="Login">
+            <p class="footer-text">By continuing, you agree to Flipkart's Terms of Use and Privacy Policy.</p>
+        </form>
+    </div>
+</div>
 
-        <input type="submit" value="Login">
-    </form>
 </body>
 </html>
