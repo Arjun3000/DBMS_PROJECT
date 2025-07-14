@@ -5,7 +5,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = $_POST['name'];
     $password = $_POST['password'];
 
-    // ❌ Vulnerable SQL Query (No sanitization, no prepared statement)
+    
     $sql = "SELECT * FROM users WHERE name = '$name' AND password = '$password'";
     $result = mysqli_query($conn, $sql);
 

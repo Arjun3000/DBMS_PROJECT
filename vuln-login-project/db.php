@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost";
 $username = "root";
-$password = ""; // your MySQL root password here
+$password = "@Rjun@123"; 
 $database = "VulnDB";
 
 // Create connection
